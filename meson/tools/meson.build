@@ -1,0 +1,5 @@
+subdir('geometryc')
+subdir('geometryv')
+subdir('shaderc')
+subdir('texturec')
+subdir('texturev')
