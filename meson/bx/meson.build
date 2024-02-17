@@ -10,9 +10,9 @@ msvc_compiler = meson.get_compiler('cpp')
 
 
 if(get_option('buildtype') == 'debug')
-  bx_cpp_args = '-DBX_CONFIG_DEBUG=1'#add_project_arguments('-DBX_CONFIG_DEBUG=1', language: 'cpp')
+  bx_cpp_args = '-DBX_CONFIG_DEBUG=1'
 else
-  bx_cpp_args = '-DBX_CONFIG_DEBUG=0'#add_project_arguments('-DBX_CONFIG_DEBUG=0', language: 'cpp')
+  bx_cpp_args = '-DBX_CONFIG_DEBUG=0'
 endif
 
 bx_lib = static_library('bx', [

@@ -8,7 +8,7 @@ bimg_inc = include_directories([
   bimg_root + '3rdparty/tinyexr/deps/miniz',
 ])
 
-
+add_project_arguments('-D__USE_LARGEFILE64', language: 'cpp')
 
 bimg_lib = static_library('bimg', [
   bimg_root + '3rdparty/tinyexr/deps/miniz/miniz.c',
