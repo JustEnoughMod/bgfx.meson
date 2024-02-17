@@ -16,7 +16,8 @@ bimg_lib = static_library('bimg', [
 include_directories: bimg_inc,
 dependencies: [
   bx_dep
-])
+],
+cpp_args: '-D__USE_LARGEFILE64=1')
 
 bimg_decode_lib = static_library('bimg_decode', [
   bimg_root + 'src/image_decode.cpp',
