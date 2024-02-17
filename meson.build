@@ -5,6 +5,8 @@ project('bgfx', 'cpp', 'c',
                        'optimization=3'
     ])
 
+add_project_arguments('-D__USE_LARGEFILE64', language: 'cpp')
+
 subdir('meson/bx')
 subdir('meson/bimg')
 subdir('meson/bgfx')
