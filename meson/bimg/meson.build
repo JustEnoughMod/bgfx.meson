@@ -13,8 +13,7 @@ bimg_inc = include_directories([
 bimg_lib = static_library('bimg', [
   bimg_root + '3rdparty/tinyexr/deps/miniz/miniz.c',
   bimg_root + 'src/image.cpp',
-  bimg_root + 'src/image_gnf.cpp',
-  bimg_root + 'src/image_decode.cpp'
+  bimg_root + 'src/image_gnf.cpp'
 ],
 include_directories: bimg_inc,
 dependencies: [
