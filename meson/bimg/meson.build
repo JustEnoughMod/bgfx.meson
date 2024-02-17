@@ -111,7 +111,7 @@ bimg_dep = declare_dependency(
   include_directories: bimg_inc,
   link_with: [
     bimg_lib,
-    bimg_encode_lib
+    bimg_encode_lib,
     bimg_decode_lib
   ]
 )
