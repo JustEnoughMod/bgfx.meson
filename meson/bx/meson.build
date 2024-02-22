@@ -2,12 +2,8 @@ bx_root = '../../bx/'
 bx_inc = include_directories([
   bx_root + 'include',
   bx_root + 'include/compat/linux', 
-  #'include/tinystl',
   bx_root + '3rdparty/',
 ])
-
-msvc_compiler = meson.get_compiler('cpp')
-
 
 if(get_option('buildtype') == 'debug')
   bx_cpp_args = '-DBX_CONFIG_DEBUG=1'

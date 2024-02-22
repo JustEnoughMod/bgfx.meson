@@ -1,5 +1,4 @@
 bgfx_root = '../../bgfx/'
-shader_inc = [meson.current_source_dir() / bgfx_root / 'src', meson.current_source_dir() / bgfx_root / 'src/varying.def.sc']
 bgfx_inc = include_directories([
   bgfx_root + 'include',
   bgfx_root + '3rdparty',
