@@ -21,6 +21,9 @@
 #include <etc2/ProcessRGB.hpp>
 #include <iqa.h>
 #include <libsquish/squish.h>
+#include <lodepng/lodepng.cpp>
 #include <nvtt/nvtt.h>
 #include <pvrtc/PvrTcEncoder.h>
+#include <stb/stb_image.h>
 #include <stb/stb_image_resize.h>
+#include <tinyexr/tinyexr.h>
