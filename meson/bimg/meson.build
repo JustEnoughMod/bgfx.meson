@@ -18,9 +18,7 @@ bimg_lib = static_library('bimg', [
     bx_dep
   ],
   cpp_pch : 'pch.h',
-  c_pch : 'pch.h',
-  cpp_args: '-D_FILE_OFFSET_BITS=64',
-  c_args: '-D_FILE_OFFSET_BITS=64'
+  c_pch : 'pch.h'
 )
 
 bimg_decode_lib = static_library('bimg_decode', [
@@ -29,9 +27,7 @@ bimg_decode_lib = static_library('bimg_decode', [
   include_directories:  bimg_inc,
   dependencies: bx_dep,
   cpp_pch : 'pch.h',
-  c_pch : 'pch.h',
-  cpp_args: '-D_FILE_OFFSET_BITS=64',
-  c_args: '-D_FILE_OFFSET_BITS=64'
+  c_pch : 'pch.h'
 )
 
 bimg_encode_lib = static_library('bimg_encode', [
@@ -113,9 +109,7 @@ bimg_encode_lib = static_library('bimg_encode', [
   ],
   dependencies: bx_dep,
   cpp_pch : 'pch.h',
-  c_pch : 'pch.h',
-  cpp_args: '-D_FILE_OFFSET_BITS=64',
-  c_args: '-D_FILE_OFFSET_BITS=64'
+  c_pch : 'pch.h'
 )
 
 bimg_dep = declare_dependency(
