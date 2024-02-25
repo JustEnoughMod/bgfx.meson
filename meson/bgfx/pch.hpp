@@ -11,7 +11,11 @@
 #include <bx/string.h>
 #include <bx/uint32_t.h>
 
+#include <assert.h>
+#include <float.h>
 #include <inttypes.h>
+#include <math.h>
 #include <stdarg.h> 
 #include <stdint.h> 
 #include <stdlib.h> 
+#include <string.h>

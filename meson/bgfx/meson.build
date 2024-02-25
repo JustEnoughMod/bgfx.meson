@@ -70,7 +70,8 @@ bgfx_root + '3rdparty/meshoptimizer/src/vertexcodec.cpp',
 bgfx_root + '3rdparty/meshoptimizer/src/vertexfilter.cpp',
 bgfx_root + '3rdparty/meshoptimizer/src/vfetchanalyzer.cpp',
 bgfx_root + '3rdparty/meshoptimizer/src/vfetchoptimizer.cpp',
-])
+],
+cpp_pch : 'pch.hpp')
 
 bgfx_dep = declare_dependency(
   link_with: [
