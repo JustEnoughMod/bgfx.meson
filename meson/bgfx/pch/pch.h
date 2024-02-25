@@ -1,5 +1,3 @@
-#include <bgfx/bgfx.h>
-
 #include <bx/allocator.h>
 #include <bx/bx.h>
 #include <bx/debug.h>
@@ -12,10 +10,14 @@
 #include <bx/uint32_t.h>
 
 #include <assert.h>
+#include <ctype.h>    
 #include <float.h>
 #include <inttypes.h>
-#include <math.h>
-#include <stdarg.h> 
-#include <stdint.h> 
-#include <stdlib.h> 
+#include <limits.h>        
+#include <math.h>         
+#include <stdarg.h>
+#include <stddef.h>
+#include <stdint.h>         
+#include <stdio.h>          
+#include <stdlib.h>        
 #include <string.h>

@@ -19,9 +19,7 @@
 #include <edtaa3/edtaa3func.h>
 #include <etc1/etc1.h>
 #include <etc2/ProcessRGB.hpp>
-#include <iqa.h>
 #include <libsquish/squish.h>
-#include <lodepng/lodepng.cpp>
 #include <nvtt/nvtt.h>
 #include <pvrtc/PvrTcEncoder.h>
 #include <stb/stb_image.h>

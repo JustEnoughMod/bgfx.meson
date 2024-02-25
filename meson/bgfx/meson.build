@@ -37,8 +37,7 @@ bgfx_lib = static_library('bgfx', [
     bimg_dep,
     dependency('gl')
   ],
-  cpp_pch : 'pch.h',
-  c_pch : 'pch.h'
+  cpp_pch : 'pch/pch.h'
 )
 
 dear_imgui_lib = static_library('imgui',[
@@ -53,8 +52,7 @@ dear_imgui_lib = static_library('imgui',[
     bx_dep,
     bimg_dep
   ],
-  cpp_pch : 'pch.h',
-  c_pch : 'pch.h'
+  cpp_pch : 'pch/pch.h'
 )
 
 meshoptimizer_lib = static_library('meshoptimizer', [
@@ -74,8 +72,7 @@ meshoptimizer_lib = static_library('meshoptimizer', [
     bgfx_root + '3rdparty/meshoptimizer/src/vfetchanalyzer.cpp',
     bgfx_root + '3rdparty/meshoptimizer/src/vfetchoptimizer.cpp',
   ],
-  cpp_pch : 'pch.h',
-  c_pch : 'pch.h'
+  cpp_pch : 'pch/mesh_pch.h'
 )
 
 bgfx_dep = declare_dependency(
