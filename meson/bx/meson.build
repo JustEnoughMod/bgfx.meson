@@ -36,7 +36,8 @@ bx_lib = static_library('bx', [
   bx_root + 'src/url.cpp',
 ],
 include_directories: bx_inc,
-cpp_args: bx_cpp_args
+cpp_args: bx_cpp_args,
+cpp_pch : 'pch.hpp'
 )
 
 bx_dep = declare_dependency(

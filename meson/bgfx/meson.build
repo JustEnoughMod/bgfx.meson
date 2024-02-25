@@ -36,7 +36,8 @@ dependencies: [
   bx_dep,
   bimg_dep,
   dependency('gl')
-]
+],
+cpp_pch : 'pch.hpp'
 )
 
 dear_imgui_lib = static_library('imgui',[
@@ -50,7 +51,8 @@ include_directories: bgfx_inc,
 dependencies: [
   bx_dep,
   bimg_dep
-])
+],
+cpp_pch : 'pch.hpp')
 
 meshoptimizer_lib = static_library('meshoptimizer', [
 bgfx_root + '3rdparty/meshoptimizer/src/allocator.cpp',
