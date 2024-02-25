@@ -1,9 +1,4 @@
-project('bgfx', 'cpp', 'c', 
-    default_options : ['warning_level=0',
-                       'cpp_std=c++17',
-                       'buildtype=release',
-                       'optimization=3'
-    ])
+project('bgfx', ['cpp', 'c'], default_options : ['cpp_std=c++17'])
 
 subdir('meson/bx')
 subdir('meson/bimg')

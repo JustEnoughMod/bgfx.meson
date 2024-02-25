@@ -1,7 +1,5 @@
 {
-  inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-  };
+  inputs = { nixpkgs.url = "nixpkgs/nixos-unstable"; };
 
   outputs = { self, nixpkgs }:
     let
@@ -9,8 +7,7 @@
         self.lastModifiedDate or self.lastModified or "19700101";
       version = builtins.substring 0 8 lastModifiedDate;
 
-      supportedSystems =
-        [ "x86_64-linux" "aarch64-linux" ];
+      supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
 
@@ -20,7 +17,7 @@
           overlays = [ self.overlay ];
         });
     in {
-      overlay = final: prev: {
+      overlay = final: _: {
 
         JustEnoughMod = with final;
           stdenv.mkDerivation rec {
@@ -32,12 +29,7 @@
             enableParallelBuilding = true;
 
             nativeBuildInputs = [ pkg-config meson ninja ccache ];
-            buildInputs = [
-              mesa
-              libGL
-              xorg.libX11
-              xorg.libxcb
-            ];
+            buildInputs = [ mesa libGL xorg.libX11 xorg.libxcb ];
           };
 
       };
