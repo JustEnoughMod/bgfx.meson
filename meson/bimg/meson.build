@@ -8,7 +8,7 @@ bimg_inc = include_directories([
     bimg_root + '3rdparty/tinyexr/deps/miniz',
   ])
 
-  bimg_lib = static_library('bimg', [
+bimg_lib = static_library('bimg', [
     bimg_root + '3rdparty/tinyexr/deps/miniz/miniz.c',
     bimg_root + 'src/image.cpp',
     bimg_root + 'src/image_gnf.cpp'
@@ -19,8 +19,8 @@ bimg_inc = include_directories([
   ],
   cpp_pch : 'pch.h',
   c_pch : 'pch.h',
-  cpp_args: '-D__USE_LARGEFILE64=1',
-  c_args: '-D__USE_LARGEFILE64=1'
+  cpp_args: '-D_LARGEFILE_SOURCE',
+  c_args: '-D_LARGEFILE_SOURCE'
 )
 
 bimg_decode_lib = static_library('bimg_decode', [
@@ -30,8 +30,8 @@ bimg_decode_lib = static_library('bimg_decode', [
   dependencies: bx_dep,
   cpp_pch : 'pch.h',
   c_pch : 'pch.h',
-  cpp_args: '-D__USE_LARGEFILE64=1',
-  c_args: '-D__USE_LARGEFILE64=1'
+  cpp_args: '-D_LARGEFILE_SOURCE',
+  c_args: '-D_LARGEFILE_SOURCE'
 )
 
 bimg_encode_lib = static_library('bimg_encode', [
@@ -114,8 +114,8 @@ bimg_encode_lib = static_library('bimg_encode', [
   dependencies: bx_dep,
   cpp_pch : 'pch.h',
   c_pch : 'pch.h',
-  cpp_args: '-D__USE_LARGEFILE64=1',
-  c_args: '-D__USE_LARGEFILE64=1'
+  cpp_args: '-D_LARGEFILE_SOURCE',
+  c_args: '-D_LARGEFILE_SOURCE'
 )
 
 bimg_dep = declare_dependency(
