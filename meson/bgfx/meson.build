@@ -37,7 +37,8 @@ bgfx_lib = static_library('bgfx', [
     bimg_dep,
     dependency('gl')
   ],
-  cpp_pch : 'pch/pch.h'
+  cpp_pch : 'pch/pch.h',
+  cpp_args : '-DWL_EGL_PLATFORM=1'
 )
 
 dear_imgui_lib = static_library('imgui',[
