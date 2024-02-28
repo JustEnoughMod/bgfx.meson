@@ -9,6 +9,13 @@ bgfx_inc = include_directories([
 
 ])
 
+
+bgfx_args = []
+
+if host_machine.system() == 'linux' and get_option('with_wayland')
+  bgfx_args += '-DWL_EGL_PLATFORM=1'
+endif
+
 bgfx_lib = static_library('bgfx', [
     bgfx_root + 'src/bgfx.cpp',
     bgfx_root + 'src/debug_renderdoc.cpp',
@@ -38,7 +45,7 @@ bgfx_lib = static_library('bgfx', [
     dependency('gl')
   ],
   cpp_pch : 'pch/pch.h',
-  cpp_args : '-DWL_EGL_PLATFORM=1'
+  cpp_args : bgfx_args
 )
 
 dear_imgui_lib = static_library('imgui',[
