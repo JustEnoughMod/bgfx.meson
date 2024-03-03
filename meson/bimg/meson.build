@@ -17,8 +17,6 @@ bimg_lib = static_library('bimg', [
   dependencies: [
     bx_dep
   ],
-  cpp_pch : 'pch/cpp_pch.h',
-  c_pch : 'pch/c_pch.h'
 )
 
 bimg_decode_lib = static_library('bimg_decode', [
@@ -26,7 +24,6 @@ bimg_decode_lib = static_library('bimg_decode', [
   ],
   include_directories:  bimg_inc,
   dependencies: bx_dep,
-  cpp_pch : 'pch/cpp_pch.h'
 )
 
 bimg_encode_lib = static_library('bimg_encode', [
@@ -107,8 +104,6 @@ bimg_encode_lib = static_library('bimg_encode', [
     bimg_root + '3rdparty/tinyexr/deps/miniz',
   ],
   dependencies: bx_dep,
-  cpp_pch : 'pch/cpp_pch.h',
-  c_pch : 'pch/c_pch.h'
 )
 
 bimg_dep = declare_dependency(

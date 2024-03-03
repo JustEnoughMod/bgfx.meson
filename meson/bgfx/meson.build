@@ -9,6 +9,13 @@ bgfx_inc = include_directories([
 
 ])
 
+
+bgfx_args = []
+
+if host_machine.system() == 'linux' and get_option('with_wayland')
+  bgfx_args += '-DWL_EGL_PLATFORM=1'
+endif
+
 bgfx_lib = static_library('bgfx', [
     bgfx_root + 'src/bgfx.cpp',
     bgfx_root + 'src/debug_renderdoc.cpp',
@@ -37,7 +44,7 @@ bgfx_lib = static_library('bgfx', [
     bimg_dep,
     dependency('gl')
   ],
-  cpp_pch : 'pch/pch.h'
+  cpp_args : bgfx_args,
 )
 
 dear_imgui_lib = static_library('imgui',[
@@ -52,7 +59,6 @@ dear_imgui_lib = static_library('imgui',[
     bx_dep,
     bimg_dep
   ],
-  cpp_pch : 'pch/pch.h'
 )
 
 meshoptimizer_lib = static_library('meshoptimizer', [
@@ -72,7 +78,6 @@ meshoptimizer_lib = static_library('meshoptimizer', [
     bgfx_root + '3rdparty/meshoptimizer/src/vfetchanalyzer.cpp',
     bgfx_root + '3rdparty/meshoptimizer/src/vfetchoptimizer.cpp',
   ],
-  cpp_pch : 'pch/mesh_pch.h'
 )
 
 bgfx_dep = declare_dependency(
